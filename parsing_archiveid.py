@@ -20,5 +20,5 @@ def get_archive_id_list(file_path):
 
 
 if __name__ == "__main__":
-    file_path = './data/output_json/output01.json'
+    file_path = './data/output_json/output1.json'
     get_archive_id_list(file_path)

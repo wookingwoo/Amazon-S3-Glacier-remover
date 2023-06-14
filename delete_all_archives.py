@@ -2,7 +2,7 @@ import boto3
 from tqdm import tqdm
 
 import parsing_archiveid
-from data import data
+from data import config
 
 
 def delete_all_archives(vault_name, region_name, archive_ids):
@@ -27,8 +27,8 @@ def delete_all_archives(vault_name, region_name, archive_ids):
 archive_ids = parsing_archiveid.get_archive_id_list(
     './data/output_json/output1.json')  # 예: ["your_archive_id_1", "your_archive_id_2", "your_archive_id_3"]
 
-vault_name = data.vault_name1
-region_name = data.region_name  # 예: 'us-west-2'
+vault_name = config.vault_name1
+region_name = config.region_name  # 예: 'us-west-2'
 
 # Call the function
 delete_all_archives(vault_name, region_name, archive_ids)
